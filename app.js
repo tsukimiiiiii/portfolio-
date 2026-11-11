@@ -134,3 +134,18 @@ ${pane('03 / 项目成果','<div class="result-strip franke-final-results"><div>
 ${pane('04 / 个人贡献','<p>负责品牌内容定位、历史内容分析与新品传播策略规划；独立提出并推动「立体工作站」创意落地，统筹客户沟通、设计制作、内容交付及数据复盘。</p>')}
 <div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#alinamin">下一个项目 ↓</a></div>`;
 document.querySelector('.project-links a[href="#franke"] p').textContent='海外高端家居品牌社媒声量增长';
+// AI Xiaodun: product evolution replaces the former productivity case.
+const aiIndex=document.querySelector('.metrics a[href="#ai"]');aiIndex.innerHTML='<strong>已商业化</strong><span>AI小敦 · 社媒营销业务产品化探索 ↗</span>';
+const aiIndexSummary=document.createElement('div');aiIndexSummary.className='franke-index-summary';aiIndexSummary.innerHTML='<h4>AI小敦｜社媒营销业务产品化探索</h4><p>参与将小红书代运营SOP转化为AI产品能力，协同研发团队完成业务场景测试与功能调优，支持AI社媒营销工具从内容生成向口碑营销、账号运营拓展，并实现商业化落地。</p>';frankeIndexSummary.after(aiIndexSummary);
+const aiPage=document.querySelector('#ai');const videosForWall=aiPage.querySelector('.ai-video-gallery');
+aiPage.querySelector('.sheet-header').innerHTML='<span class="sheet-kicker">AI XIAODUN / PRODUCT CO-CREATION</span><div class="case-heading"><p class="case-sub">营销SOP × 产品共创 × 商业化落地</p><h2>AI小敦<br>从内部运营流程到商业化AI产品</h2><p class="ai-core-theme">将一线营销经验产品化，探索社媒营销服务的规模化复制</p></div>';
+const evolution=[['小红书营销AI助手','内容生产标准化','通过行业模板、AI文案生成、内容优化及合规预审，将运营经验转化为标准化内容生产能力。','ai-assistant.jpg'],['商家种草码','用户口碑营销规模化','将AI内容生成能力延伸至消费场景，通过商家配置、用户扫码生成及发布笔记，拓展UGC内容生产与口碑营销服务。','ai-seeding-code.jpg'],['客户中心','社媒运营全流程产品化','围绕品牌账号需求，整合月度内容规划、图文生成、发布及数据追踪，实现从单点内容生产到持续性账号运营的流程衔接。','ai-marketing-tool.jpg']];
+aiPage.querySelector('.sheet-body').innerHTML=`${pane('01 / 项目背景','<p>传统社媒代运营依赖人工经验与定制化服务，内容策划、生产、发布及复盘等环节标准化程度有限，难以实现规模化复制。</p><p>为突破传统服务模式的限制，公司探索将运营SOP与AI技术结合，推动社媒营销能力从人工交付向产品化服务延伸。</p>')}
+${pane('02 / 产品演进：从内容工具到营销服务体系','<div class="product-evolution">'+evolution.map(([name,theme,description,file],i)=>`<article><small>PHASE 0${i+1}</small><h3>${name}</h3><h4>${theme}</h4><p>${description}</p><button class="product-image-zoom" data-file="assets/${file}" data-title="${name}" aria-label="放大查看${name}"><img src="assets/${file}" alt="${name}产品展示" loading="lazy"><span>查看大图 ↗</span></button></article>`).join('')+'</div>')}
+${pane('03 / 个人核心贡献',steps([['运营流程标准化','梳理小红书账号运营SOP，将内容规划、创作、发布、复盘等一线经验转化为产品业务需求。'],['产品测试与优化','参与产品功能测试，从品牌调性、内容质量及实际使用场景出发，反馈问题并配合研发团队调优。'],['跨团队业务协同','连接内容运营与产品研发，推动实际运营经验应用于AI工具的功能设计与迭代。']])+'<div class="ai-role-flow">运营SOP沉淀 → 产品测试调优 → 业务经验产品化</div>')}
+${pane('04 / 项目成果','<h3>AI营销产品实现商业化落地</h3><p>相关产品从内容辅助工具逐步拓展至用户口碑营销及品牌账号运营场景，形成可面向外部客户提供的标准化营销产品与服务能力。</p><p class="ai-value"><strong>个人价值：</strong>将实际营销经验抽象为标准化流程，并参与推动其转化为可复制的AI产品能力。</p>')}
+<div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#personal">个人作品 ↓</a></div>`;
+document.querySelector('.project-links a[href="#ai"] h3').textContent='AI小敦';document.querySelector('.project-links a[href="#ai"] p').textContent='社媒营销业务产品化探索';
+document.querySelector('#personal>p').textContent='设计与影像作品选集 / 标志 · 宣传海报 · 活动长图 · AI视频';
+if(videosForWall){const videoGroup=document.createElement('article');videoGroup.className='design-group wall-videos';videoGroup.innerHTML='<div class="design-group-heading"><small>04 / AI VIDEO</small><h3>AI视频作品</h3></div>';videoGroup.append(videosForWall);personalGrid.append(videoGroup)}
+document.querySelectorAll('.product-image-zoom').forEach(button=>button.addEventListener('click',()=>{const img=designDialog.querySelector('img');img.src=button.dataset.file;img.alt=button.dataset.title;designDialog.querySelector('.design-dialog-bar span').textContent=button.dataset.title;designDialog.showModal();designDialog.querySelector('.design-dialog-body').scrollTop=0}));
