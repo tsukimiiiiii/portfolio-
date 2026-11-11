@@ -157,3 +157,11 @@ personalGrid.className='masonry-wall';personalGrid.innerHTML=wallWorks.map(([fil
 existingVideoCards.forEach(figure=>{const tile=document.createElement('article');tile.className='work-tile work-video';tile.append(figure);personalGrid.append(tile)});
 document.querySelector('#personal>p').textContent='设计与影像作品选集 / 标志 · 海报 · 活动长图 · 原创微信表情包 · AI视频';
 document.querySelectorAll('.wall-zoom').forEach(button=>button.addEventListener('click',()=>{const img=designDialog.querySelector('img');img.src=button.dataset.file;img.alt=button.dataset.title;designDialog.querySelector('.design-dialog-bar span').textContent=button.dataset.title;designDialog.showModal();designDialog.querySelector('.design-dialog-body').scrollTop=0}));
+// Overview headline replaces the old numeric FRANKE card.
+frankeIndex.classList.add('franke-headline-card');frankeIndex.innerHTML='<strong>从0到1打造弗兰卡中国市场声量</strong><span>FRANKE弗兰卡｜瑞士厨电品牌内容营销 ↗</span>';
+// Remove redundant event continuation images; keep the principal event design.
+document.querySelectorAll('.work-tile').forEach(tile=>{const image=tile.querySelector('img');if(image&&/design-event-0[23]\./.test(image.getAttribute('src')))tile.remove()});
+const stickerPair=document.createElement('div');stickerPair.className='sticker-pair';
+const stickerTiles=[...personalGrid.querySelectorAll('.work-tile')].filter(tile=>tile.querySelector('img')?.getAttribute('src').includes('cat-stickers-'));
+if(stickerTiles.length){personalGrid.prepend(stickerPair);stickerTiles.forEach(tile=>stickerPair.append(tile))}
+personalGrid.querySelectorAll('.work-tile').forEach(tile=>{const caption=tile.querySelector('.work-tile-caption');if(caption)tile.prepend(caption);const figure=tile.querySelector('figure');if(figure){const oldCaption=figure.querySelector('figcaption');if(oldCaption){const heading=document.createElement('div');heading.className='work-tile-caption';heading.innerHTML='<small>AI视频作品</small><h3>'+oldCaption.textContent+'</h3>';tile.prepend(heading);oldCaption.remove()}}});
