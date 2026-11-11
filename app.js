@@ -177,3 +177,6 @@ const mobileNotes=matchMedia('(max-width: 800px), (pointer: coarse)');
 function updateNoteTargets(){noteLinks.forEach(link=>{link.target=mobileNotes.matches?'_self':'_blank';link.setAttribute('aria-label',mobileNotes.matches?'查看小红书原笔记':'在新窗口查看小红书原笔记')})}
 updateNoteTargets();mobileNotes.addEventListener('change',updateNoteTargets);
 noteLinks.forEach(link=>{const fallback=document.createElement('div');fallback.className='note-link-help';const copyButton=document.createElement('button');copyButton.type='button';copyButton.textContent='复制笔记链接';const hint=document.createElement('small');hint.textContent='无法跳转时，可复制链接到系统浏览器打开';fallback.append(copyButton,hint);link.after(fallback);copyButton.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(link.href);copyButton.textContent='已复制';setTimeout(()=>copyButton.textContent='复制笔记链接',2200)}catch{copyButton.textContent='请长按下方链接复制';hint.textContent=link.href}})});
+// App-generated share links supplied by the owner for mobile handoff.
+const queensAppShare=document.querySelector('.xhs-project-link');if(queensAppShare)queensAppShare.href='https://xhslink.cn/o/OxMIVgvTPc';
+const alinaminAppShare=document.querySelector('.alinamin-note');if(alinaminAppShare)alinaminAppShare.href='https://xhslink.cn/o/7c43W8ddvWv';
