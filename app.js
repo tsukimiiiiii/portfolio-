@@ -98,3 +98,20 @@ const coverArt=[['.scene-photo .photo-placeholder','assets/franke-box-pro.jpg','
 coverArt.forEach(([selector,src,alt])=>{const placeholder=hero.querySelector(selector);if(placeholder){const img=document.createElement('img');img.src=src;img.alt=alt;img.className='hero-project-image';placeholder.replaceWith(img)}});
 const coverTools=[['.scene-tool1 .tool-tile','<img src="assets/chatgpt.svg" alt="ChatGPT" class="brand-icon">'],['.scene-tool2 .tool-tile','<img src="assets/douyin.svg" alt="抖音" class="brand-icon douyin-mark">'],['.scene-tool3 .tool-tile','<span class="xiaohongshu-mark">小红书</span>']];
 coverTools.forEach(([selector,html])=>{const tile=hero.querySelector(selector);if(tile)tile.innerHTML=html});
+// FRANKE content revision supplied by the portfolio owner.
+const frankeIndex=document.querySelector('.metrics a[href="#franke"]');
+frankeIndex.innerHTML='<strong>+230%</strong><span>弗兰卡阶段性账号阅读量增长 ↗</span>';
+const frankeIndexSummary=document.createElement('div');frankeIndexSummary.className='franke-index-summary';frankeIndexSummary.innerHTML='<h4>FRANKE弗兰卡｜瑞士厨电品牌内容营销</h4><p>基于品牌定位与历史内容分析优化新品传播策略，独立提出「立体工作站」原创概念，获客户采纳并复用于KFS及达人内容。</p>';document.querySelector('.metrics').after(frankeIndexSummary);
+const revisedFranke=document.querySelector('#franke');
+revisedFranke.querySelector('.sheet-header').innerHTML='<span class="sheet-kicker">FRANKE / BRAND CONTENT STRATEGY</span><div class="case-heading"><p class="case-sub">瑞士厨电品牌｜品牌内容策略｜新品营销</p><h2>FRANKE弗兰卡<br>从品牌形象建设到新品传播，<br>以内容策略驱动品牌增长</h2><div class="franke-meta"><p>项目周期：2025.07–10、2026.06–09</p><p>个人职责：品牌内容规划、创意策划、客户对接、项目执行及数据复盘</p></div></div>';
+const retainedProduct=revisedFranke.querySelector('.product-photo-window').outerHTML;
+revisedFranke.querySelector('.sheet-body').innerHTML=`<div class="result-strip revised-results"><div><strong>+230%</strong><span>阶段性账号阅读量增长</span></div><div><strong class="result-statement">原创传播概念获客户采纳</strong><span>应用于新品推广、KFS 及达人内容，跨渠道复用</span></div></div>
+${pane('01 / 营销背景','<h3>阶段性营销合作，持续性的品牌表达。</h3><p>FRANKE弗兰卡是瑞士厨房设备品牌，旗下产品覆盖水槽、龙头、烟机、灶具及洗碗机等多个品类。</p><p>品牌主要围绕新品上市及电商大促等关键节点开展阶段性社交媒体营销合作，日常则由内部团队维护账号。</p><p>在阶段性营销需求下，既要延续品牌长期定位，又要针对新品上市等不同业务目标制定具有传播针对性的内容策略，实现品牌形象与产品推广的协同。</p>')}
+${pane('02 / 营销挑战',steps([['品牌形象如何保持一致？','面对阶段性营销合作与日常内容维护交替的运营模式，需要建立统一、具有辨识度的品牌内容表达。'],['专业产品卖点如何转化为消费价值？','高客单价厨电产品涉及复杂技术参数与功能设计，需要让消费者直观理解产品能够解决什么问题。'],['有限的内容资源如何实现有效分配？','针对不同新品和营销节点，需要基于历史内容表现识别传播机会，合理规划产品种草、品牌理念及品类科普等内容方向。']]))}
+${pane('03 / 解决方案：品牌定位 × 内容策略 × 新品创意','<div class="strategy-timeline"><div><small>第一阶段 / 品牌形象建设</small><h3>从定位出发，统一内容表达</h3><p>结合品牌定价、目标消费人群及产品定位，围绕品质厨房、空间美学与整体厨房解决方案，重新规划品牌社交媒体内容表达，建立更统一的品牌形象。</p></div><div><small>第二阶段 / 新品传播策略优化</small><h3>用历史内容，识别传播机会</h3><p>延续既有品牌定位，回溯历史笔记表现，对内容按传播主题和产品品类进行分类分析。</p><p>根据不同内容类型的传播特点，结合当期新品推广目标，调整选题方向及内容组合，明确功能种草、品牌理念和节点内容在传播中的不同作用。</p></div><div><small>第三阶段 / 原创传播概念打造</small><h3>「立体工作站」</h3><p>针对Box Pro新品水槽的三层功能结构，独立提出「立体工作站」创意概念。</p><p>将原本专业的功能参数转化为更直观的厨房空间解决方案，以「向垂直空间要面积」作为沟通切口，帮助消费者理解产品在空间利用和使用体验上的价值。</p><p>该概念获得客户采纳，并进一步应用于新品推广、KFS及达人内容，形成可持续复用的传播表达。</p></div></div>')}
+<div class="concept-spread"><div><small>THE CREATIVE IDEA</small><h3>向垂直空间<br>要面积。</h3><p>Box Pro · 厨房的立体工作站</p></div>${retainedProduct}</div>
+${pane('04 / 数据分析与内容策略迭代','<p>通过对不同类型内容进行归因分析，形成三项策略判断：</p>'+steps([['功能场景型内容','通过具体使用问题与解决方案激发产品兴趣，适合承担新品功能种草任务。'],['品牌理念型内容','围绕厨房空间、美学及生活方式建立品牌形象，承担互动沉淀与品牌价值沟通任务。'],['品类科普型内容','根据产品品类与目标受众的匹配程度调整选题角度，避免不同品类采用同质化传播方式。']])+'<p>基于内容表现与营销目标，为后续选题规划和内容资源配置提供策略依据。</p>')}
+${pane('05 / 个人核心贡献','<div class="franke-contributions">'+[['品牌内容策略','连续参与品牌两个阶段的内容建设，根据品牌定位及营销目标调整社交媒体传播方向。'],['数据分析与规划','回溯历史内容表现，开展内容分类归因，提出针对性的内容结构及选题优化建议。'],['原创创意策划','独立提出Box Pro「立体工作站」传播概念，推动客户采纳并跨渠道复用。'],['项目统筹与落地','独立负责客户日常沟通、月度内容规划、内部设计制作协调、内容交付及效果复盘。']].map(([h,p])=>'<div><h4>'+h+'</h4><p>'+p+'</p></div>').join('')+'</div>')}
+${pane('06 / 项目价值总结','<h3>阶段性增长 × 长期内容资产</h3><p>围绕成熟国际品牌的阶段性营销需求，建立从品牌定位、内容分析到新品创意落地的策略方法。</p><p>在账号整体阅读表现增长的同时，推动原创产品传播概念转化为品牌可持续复用的内容资产，兼顾阶段性传播需求与品牌长期内容建设。</p>')}
+<div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#alinamin">下一个项目 ↓</a></div>`;
+document.querySelector('.project-links a[href="#franke"] p').textContent='从品牌形象建设到新品传播';
