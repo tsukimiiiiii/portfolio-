@@ -124,3 +124,13 @@ ${pane('02 / 核心策略一','<h3>从品牌定位到差异化内容布局</h3><
 ${pane('04 / 项目成果',steps([['传播表现','合作期间，账号阶段性阅读量增长约230%。'],['策略沉淀','形成基于历史内容表现与当期营销目标的分类分析及选题规划方法。'],['创意价值','「立体工作站」概念获客户采纳并跨渠道复用，成为新品传播的核心表达之一。']]))}
 ${pane('05 / 我的贡献','<p>参与两阶段品牌内容策略建设，独立负责内容规划、历史内容分析及客户项目统筹；原创提出「立体工作站」概念并推动落地，负责客户沟通、设计制作协调与项目复盘。</p>')}
 <div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#alinamin">下一个项目 ↓</a></div>`;
+// Latest owner-supplied FRANKE positioning and case copy.
+frankeIndexSummary.innerHTML='<h4>FRANKE弗兰卡｜从0到1打造弗兰卡中国市场声量</h4><p>针对瑞士高端厨电品牌阶段性传播需求，通过品牌定位、内容策略优化与新品创意策划，推动账号从低频维护向体系化传播升级，助力品牌实现社媒声量快速增长。</p>';
+revisedFranke.querySelector('.sheet-header').innerHTML='<span class="sheet-kicker">FRANKE / BRAND CONTENT STRATEGY</span><div class="case-heading"><p class="case-sub">瑞士厨电品牌｜品牌内容策略 × 新品营销</p><h2>FRANKE弗兰卡<br>海外高端家居品牌社媒声量增长</h2></div>';
+revisedFranke.querySelector('.sheet-body').innerHTML=`
+${pane('01 / 项目背景与挑战','<p>弗兰卡以新品上市及电商大促为主要营销节点，日常社媒账号由品牌内部低频维护。</p><p>项目需要在有限的合作周期内，建立统一的品牌内容形象，将专业产品卖点转化为消费者易于理解的价值表达，并提升中国社媒平台的传播声量。</p>')}
+${pane('02 / 核心策略','<div class="franke-contributions"><div><h4>品牌定位｜从零散内容到体系化表达</h4><p>2025年结合品牌定价与目标客群，围绕品质厨房、空间美学及整体厨房解决方案，重新梳理品牌内容定位，建立统一的传播风格。</p></div><div><h4>内容优化｜以数据洞察指导新品传播</h4><p>2026年围绕新品上市需求，回溯历史笔记表现，按内容类型进行归因分析，调整功能种草、品牌理念及品类科普的内容配比，优化阶段性传播规划。</p></div></div><div class="editorial-grid franke-concept-compact"><div><h3>创意突破｜打造「立体工作站」传播概念</h3><p>针对Box Pro水槽的三层功能结构，独立提出「立体工作站」概念，以「向垂直空间要面积」将专业卖点转化为直观的厨房空间价值。</p><p>概念获客户采纳，并复用于新品推广、KFS及达人内容。</p></div>'+retainedProduct+'</div>')}
+${pane('03 / 项目成果','<div class="result-strip franke-final-results"><div><strong>145.3万</strong><span>季度累计曝光</span></div><div><strong>+230%</strong><span>阶段性账号阅读量增长</span></div></div><div class="creative-result"><h4>创意资产沉淀</h4><p>「立体工作站」获客户采纳并跨渠道复用</p></div>')}
+${pane('04 / 个人贡献','<p>负责品牌内容定位、历史内容分析与新品传播策略规划；独立提出并推动「立体工作站」创意落地，统筹客户沟通、设计制作、内容交付及数据复盘。</p>')}
+<div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#alinamin">下一个项目 ↓</a></div>`;
+document.querySelector('.project-links a[href="#franke"] p').textContent='海外高端家居品牌社媒声量增长';
