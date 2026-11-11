@@ -77,7 +77,7 @@ const rucCoverLink=document.querySelector('#ruc .xhs-project-link');
 if(rucCoverLink){rucCoverLink.classList.add('has-cover');rucCoverLink.innerHTML='<img class="xhs-cover" src="assets/ruc-episode-01.jpg" alt="非典型留学指南第1期：学历和面包我都要，周末全日制硕士了解一下" width="1200" height="1600" loading="lazy"><span class="cover-link-caption">非典型留学指南 · 第 1 期<span>点击查看小红书原笔记 ↗</span></span>';}
 
 const frankeProduct=document.querySelector('#franke .concept-spread .evidence-slot');
-if(frankeProduct){frankeProduct.classList.add('product-photo-window');frankeProduct.innerHTML='<div class="evidence-chrome">● ● ● <span>FRANKE / BOX PRO</span></div><img src="assets/franke-box-pro.jpg" alt="弗兰卡 Box Pro 水槽及厨房台面场景" width="4500" height="4500" loading="lazy">';}
+if(frankeProduct){frankeProduct.classList.add('product-photo-window');frankeProduct.innerHTML='<div class="evidence-chrome">● ● ● <span>FRANKE / BOX PRO</span></div><img src="assets/franke-box-pro-light.jpeg" alt="弗兰卡 Box Pro 水槽及厨房台面场景" width="4500" height="4500" loading="lazy">';}
 document.querySelectorAll('#franke .editorial-grid').forEach(grid=>{if(grid.children.length===1)grid.classList.add('single-pane')});
 
 const alinaminSlots=document.querySelectorAll('#alinamin .evidence-slot');
@@ -94,7 +94,7 @@ personalGrid.className='design-collection';personalGrid.innerHTML=designGroups.m
 const designDialog=document.createElement('dialog');designDialog.className='design-dialog';designDialog.innerHTML='<div class="design-dialog-bar"><span></span><button type="button" aria-label="关闭作品大图">关闭 ×</button></div><div class="design-dialog-body"><img alt=""></div>';document.body.append(designDialog);
 document.querySelectorAll('.design-zoom').forEach(button=>button.addEventListener('click',()=>{const img=designDialog.querySelector('img');img.src=button.dataset.file;img.alt=button.dataset.title;designDialog.querySelector('.design-dialog-bar span').textContent=button.dataset.title;designDialog.showModal();designDialog.querySelector('.design-dialog-body').scrollTop=0}));designDialog.querySelector('button').addEventListener('click',()=>designDialog.close());designDialog.addEventListener('click',e=>{if(e.target===designDialog)designDialog.close()});
 // Cover uses the same real project assets as the case studies.
-const coverArt=[['.scene-photo .photo-placeholder','assets/franke-box-pro.jpg','弗兰卡 Box Pro 场景'],['.scene-device .photo-placeholder','assets/ai-marketing-tool.jpg','AI 营销工具界面'],['.scene-phone .photo-placeholder','assets/alinamin-autumn.png','合利他命官号设计']];
+const coverArt=[['.scene-photo .photo-placeholder','assets/franke-box-pro-light.jpeg','弗兰卡 Box Pro 场景'],['.scene-device .photo-placeholder','assets/ai-marketing-tool.jpg','AI 营销工具界面'],['.scene-phone .photo-placeholder','assets/alinamin-autumn.png','合利他命官号设计']];
 coverArt.forEach(([selector,src,alt])=>{const placeholder=hero.querySelector(selector);if(placeholder){const img=document.createElement('img');img.src=src;img.alt=alt;img.className='hero-project-image';placeholder.replaceWith(img)}});
 const coverTools=[['.scene-tool1 .tool-tile','<img src="assets/chatgpt.svg" alt="ChatGPT" class="brand-icon">'],['.scene-tool2 .tool-tile','<img src="assets/douyin.svg" alt="抖音" class="brand-icon douyin-mark">'],['.scene-tool3 .tool-tile','<span class="xiaohongshu-mark">小红书</span>']];
 coverTools.forEach(([selector,html])=>{const tile=hero.querySelector(selector);if(tile)tile.innerHTML=html});
