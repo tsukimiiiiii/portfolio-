@@ -115,3 +115,12 @@ ${pane('05 / 个人核心贡献','<div class="franke-contributions">'+[['品牌�
 ${pane('06 / 项目价值总结','<h3>阶段性增长 × 长期内容资产</h3><p>围绕成熟国际品牌的阶段性营销需求，建立从品牌定位、内容分析到新品创意落地的策略方法。</p><p>在账号整体阅读表现增长的同时，推动原创产品传播概念转化为品牌可持续复用的内容资产，兼顾阶段性传播需求与品牌长期内容建设。</p>')}
 <div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#alinamin">下一个项目 ↓</a></div>`;
 document.querySelector('.project-links a[href="#franke"] p').textContent='从品牌形象建设到新品传播';
+// Condensed FRANKE narrative approved by the portfolio owner.
+revisedFranke.querySelector('.sheet-header').innerHTML='<span class="sheet-kicker">FRANKE / BRAND CONTENT STRATEGY</span><div class="case-heading"><p class="case-sub">瑞士厨电品牌｜品牌内容策略 × 新品营销</p><h2>FRANKE弗兰卡<br>从品牌内容建设到新品创意资产沉淀</h2></div>';
+revisedFranke.querySelector('.sheet-body').innerHTML=`<div class="result-strip revised-results concise-results"><div><strong>+230%</strong><span>阶段性账号阅读量增长</span></div></div>
+${pane('01 / 项目背景与挑战','<p>弗兰卡主要围绕新品上市及电商大促开展阶段性社媒合作，日常账号由品牌内部维护。面对高客单价、专业功能复杂的厨房产品，项目既需要维持品牌表达的一致性，也需要在有限的营销周期内，让新品价值被消费者快速理解。</p>')}
+${pane('02 / 核心策略一','<h3>从品牌定位到差异化内容布局</h3><div class="franke-contributions"><div><h4>2025年｜确立品牌内容形象</h4><p>基于产品定价及目标客群，围绕品质厨房、空间美学与整体厨房解决方案，重新梳理社媒内容定位，建立统一的品牌表达。</p></div><div><h4>2026年｜围绕新品目标优化内容结构</h4><p>延续既有品牌定位，回溯历史笔记表现，通过内容分类与效果分析，重新调整产品功能、品牌理念及品类内容的选题配比，让不同内容承担明确的传播任务。</p></div></div>')}
+<div class="editorial-grid franke-concept-compact">${pane('03 / 核心策略二','<h3>把三层功能区<br>变成品牌传播概念</h3><p>针对Box Pro水槽的三层功能结构，独立提出<strong>「立体工作站」</strong>原创传播概念。</p><p>将传统的产品功能介绍转化为<strong>「向垂直空间要面积」</strong>的空间解决方案，让消费者直观理解新品如何提升厨房操作效率及空间利用体验。</p><p>这一概念获得客户采纳，成为新品推广的统一表达，并进一步复用于KFS及达人内容，实现从单篇内容创意到跨渠道传播资产的延伸。</p>')}${retainedProduct}</div>
+${pane('04 / 项目成果',steps([['传播表现','合作期间，账号阶段性阅读量增长约230%。'],['策略沉淀','形成基于历史内容表现与当期营销目标的分类分析及选题规划方法。'],['创意价值','「立体工作站」概念获客户采纳并跨渠道复用，成为新品传播的核心表达之一。']]))}
+${pane('05 / 我的贡献','<p>参与两阶段品牌内容策略建设，独立负责内容规划、历史内容分析及客户项目统筹；原创提出「立体工作站」概念并推动落地，负责客户沟通、设计制作协调与项目复盘。</p>')}
+<div class="case-nav"><a href="#projects">↑ 返回项目总览</a><a href="#alinamin">下一个项目 ↓</a></div>`;
